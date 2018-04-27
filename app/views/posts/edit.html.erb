@@ -1,2 +1,9 @@
-<h1>Posts#edit</h1>
-<p>Find me in app/views/posts/edit.html.erb</p>
+<form action="/posts/update/<%= @post_edit.id %>" method="POST">
+    제목<br />
+    <input type="text" name="head" value="<%= @post_edit.title %>" /><br /><br />
+    내용<br />
+    <textarea rows="5" name="inside"><%= @post_edit.content %></textarea>
+    
+    <input type="submit" name="글 쓰기" />
+    
+</form>

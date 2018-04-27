@@ -5,13 +5,13 @@ Rails.application.routes.draw do
 
   get 'posts/new'
 
-  get 'posts/update'
+  post 'posts/update/:id' => 'posts#update'
 
   get 'posts/show/:id' => 'posts#show'
 
   post 'posts/create' => 'posts#create'
 
-  get 'posts/edit'
+  get 'posts/edit/:id' => 'posts#edit'
 
   get 'posts/destroy'
 
